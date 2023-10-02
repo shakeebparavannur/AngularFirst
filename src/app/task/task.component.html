@@ -1,0 +1,14 @@
+<p>{{task}}</p>
+<!-- <input type="text" (input)="addTask($event)"> -->
+
+<!-- Two way binding -->
+<input type="text" class="form-control"
+[(ngModel)]="task"
+>
+<select [(ngModel)]="selectedOption">
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
+  </select>
+  <p>Selected option: {{ selectedOption }}</p>
+
