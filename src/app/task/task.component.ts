@@ -16,5 +16,5 @@ export class TaskComponent {
     updateName = (e:any)=>{
       this.name=e.target.value;
     }
-    isUsernameDisabled=this.name==='';
+    
 }
