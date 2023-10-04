@@ -7,9 +7,14 @@ import { Component } from '@angular/core';
 })
 export class TaskComponent {
   task='initial data';
+  name='';
   selectedOption='option1'
     addTask(e:any){
       console.log(e.target.value);
       this.task = e.target.value;
     }
+    updateName = (e:any)=>{
+      this.name=e.target.value;
+    }
+    isUsernameDisabled=this.name==='';
 }

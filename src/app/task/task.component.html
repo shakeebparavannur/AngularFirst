@@ -2,7 +2,7 @@
 <!-- <input type="text" (input)="addTask($event)"> -->
 
 <!-- Two way binding -->
-<input type="text" class="form-control"
+<!-- <input type="text" class="form-control"
 [(ngModel)]="task"
 >
 <select [(ngModel)]="selectedOption">
@@ -10,5 +10,8 @@
     <option value="option2">Option 2</option>
     <option value="option3">Option 3</option>
   </select>
-  <p>Selected option: {{ selectedOption }}</p>
+  <p>Selected option: {{ selectedOption }}</p> -->
 
+<input type="text" class="form-control" [(ngModel)]="name">
+<p>{{name}}</p>
+<button class="btn btn-primary"[disabled]="name===''"(click)="name=''">Update</button>
