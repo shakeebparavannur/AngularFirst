@@ -12,9 +12,9 @@
   </select>
   <p>Selected option: {{ selectedOption }}</p> -->
 
-<input type="text" class="form-control" [(ngModel)]="name">
+<input type="text" class="form-control" [(ngModel)]="name"> 
 <p *ngIf="newTaskAdded; else noServer">New Task is: {{name}}</p>
 <ng-template #noServer> 
   <p>No server was created</p>
 </ng-template>
-<button class="btn btn-primary"[disabled]="name===''"(click)="newTaskAdded = true;">Update</button>
+<button class="btn btn-primary"[disabled]="name===''"(click)="addTask(name)">Update</button>
