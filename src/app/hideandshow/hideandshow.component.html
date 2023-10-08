@@ -1,0 +1,9 @@
+<!-- <p>hideandshow works!</p> -->
+
+<!-- <button class="btn btn-primary" (click)="showSecret=!showSecret">Show</button> -->
+<button class="btn btn-primary" (click)="onToggleDisplay()">Show</button>
+<p *ngIf="showSecret">Secret password = tuna</p>
+<div 
+[ngStyle]="{backgroundColor:logItem>=5?'red':'green'}"
+[ngClass]="{'whiteColor':logItem>=5}"
+*ngFor="let logItem of log">{{ logItem }}</div>

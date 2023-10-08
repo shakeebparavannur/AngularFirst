@@ -25,13 +25,12 @@ export class TaskComponent {
     updateName = (e:any)=>{
       this.name=e.target.value; 
     }
-    done = (task)=>{
-      console.log(task,'clicked');
-      this.tasks=this.tasks.filter((t)=>{
-        console.log(t.id,"iterated data");
-        t.id!=task;
-      })
-      console.log(this.tasks);
+    done = (tas)=>{
+      console.log(tas,'clicked');
+      this.tasks=this.tasks.filter((t)=>t.id!==tas)
+        // console.log(t,"iterated data"); t!==tas;
+      
+     
     }
     
 }

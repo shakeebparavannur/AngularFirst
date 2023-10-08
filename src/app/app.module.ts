@@ -11,6 +11,7 @@ import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { CounterComponent } from './counter/counter.component';
 import { TaskComponent } from './task/task.component';
 import { FormsModule } from '@angular/forms';
+import { HideandshowComponent } from './hideandshow/hideandshow.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     WarningClassComponent,
     SuccessAlertComponent,
     CounterComponent,
-    TaskComponent
+    TaskComponent,
+    HideandshowComponent
   ],
   imports: [
     BrowserModule,

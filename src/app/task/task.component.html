@@ -16,10 +16,11 @@
     <ng-template #noServer> 
       <p>No server was created</p>
     </ng-template> -->
-  <input type="text" class="form-control" [(ngModel)]="name"> 
-<button class="btn btn-primary"[disabled]="name===''"(click)="addTask(name)">Update</button>
-<div *ngFor="let t of tasks">
+<input type="text" class="form-control" [(ngModel)]="name"> 
+<button class="btn btn-primary"[disabled]="name===''"(click)="addTask(name);name=''">Update</button>
+<div *ngFor="let t of tasks;let i = index">
   <li >{{t.task}}</li>
+  <!-- <p>{{i}}</p> -->
   <button class="btn btn-primary m-auto">Update</button>
   <button class="btn btn-success" (click)="done(t.id)">Done</button>
 </div>
