@@ -12,9 +12,14 @@
   </select>
   <p>Selected option: {{ selectedOption }}</p> -->
 
-<input type="text" class="form-control" [(ngModel)]="name"> 
-<p *ngIf="newTaskAdded; else noServer">New Task is: {{name}}</p>
-<ng-template #noServer> 
-  <p>No server was created</p>
-</ng-template>
+  <!-- <p *ngIf="newTaskAdded; else noServer">New Task is: {{name}}</p>
+    <ng-template #noServer> 
+      <p>No server was created</p>
+    </ng-template> -->
+  <input type="text" class="form-control" [(ngModel)]="name"> 
 <button class="btn btn-primary"[disabled]="name===''"(click)="addTask(name)">Update</button>
+<div *ngFor="let t of tasks">
+  <li >{{t.task}}</li>
+  <button class="btn btn-primary m-auto">Update</button>
+  <button class="btn btn-success" (click)="done(t.id)">Done</button>
+</div>

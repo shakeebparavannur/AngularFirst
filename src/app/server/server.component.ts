@@ -3,6 +3,7 @@ import { Component } from "@angular/core";
 @Component({
     selector: 'app-server',
     templateUrl:'./server.component.html',
+    // template:`<h2 [class.value]=>".online">demo</h2>`,
     styles:[`
         .online{
             color:white;
@@ -12,6 +13,7 @@ import { Component } from "@angular/core";
 export class ServerComponent{
     serverId:number =10;
     serverStatus:string  = 'running';
+    public value = true;
     /**
      *
      */
